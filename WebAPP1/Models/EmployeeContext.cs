@@ -10,6 +10,7 @@ namespace WebAPP1.Models
 {
     public class EmployeeContext
     {
+        //For Sql connection
         SqlConnection con = new SqlConnection("Data Source=DESKTOP-CLDOE1G\\SQLEXPRESS;Initial Catalog=Employee;Integrated Security=true");
         public List<Employee> GetEmployees()
         {
