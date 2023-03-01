@@ -1,0 +1,31 @@
+﻿@model List<WebAPP1.Models.Employee>
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+<h2>Employee List</h2>
+<table class="table table-bordered table-condensed">
+    <thead>
+        <tr>
+            <th>EMPID</th>
+            <th>EMPName</th>
+            <th>EMPSalary</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+   
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.EmpID</td>
+                <td>@item.EmpName</td>
+                <td>@item.EmpSalary</td>
+                <td>@Html.ActionLink("Edit","Edit",new {id=@item.EmpID })
+                || @Html.ActionLink("Delete","Delete",new {id=@item.EmpID })</td>
+                
+            </tr>
+        }
+   
+</table>
